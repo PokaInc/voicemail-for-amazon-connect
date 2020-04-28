@@ -101,12 +101,12 @@ echo "--------------------------------------------------------------------------
 cd $template_dir
 echo "cp $template_dir/*.template $template_dist_dir/"
 cp $template_dir/*.template $template_dist_dir/
-echo "copy yaml templates and rename"
-cp $template_dir/*.yaml $template_dist_dir/
+echo "copy json templates and rename"
+cp $template_dir/*.json $template_dist_dir/
 cd $template_dist_dir
-# Rename all *.yaml to *.template
-for f in *.yaml; do 
-    mv -- "$f" "${f%.yaml}.template"
+# Rename all *.json to *.template
+for f in *.json; do 
+    mv -- "$f" "${f%.json}.template"
 done
 
 cd ..

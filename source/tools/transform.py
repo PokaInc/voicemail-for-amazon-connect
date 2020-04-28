@@ -147,9 +147,6 @@ def transform_template(template, save_path, lambda_zip_key, lambda_jar_key):
             }
         }
 
-        del resources["ServerlessDeploymentBucketPolicy"]
-        del resources["ServerlessDeploymentBucket"]
-
         data["Parameters"]["ServerlessDeploymentBucket"] = {
             "Type": "String",
             "Default": "",
