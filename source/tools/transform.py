@@ -147,11 +147,11 @@ def transform_template(template, save_path, lambda_zip_key, lambda_jar_key):
             }
         }
 
-        data["Parameters"]["ServerlessDeploymentBucket"] = {
-            "Type": "String",
-            "Default": "",
-            "Description": "The bucket to which the lambda zips are deployed to"
-        }
+        # data["Parameters"]["ServerlessDeploymentBucket"] = {
+        #     "Type": "String",
+        #     "Default": "",
+        #     "Description": "The bucket to which the lambda zips are deployed to"
+        # }
         with open(save_path, 'w') as outfile:
             json.dump(data, outfile, indent=2, sort_keys=False)
 
